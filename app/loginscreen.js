@@ -3,21 +3,23 @@ import { View, StyleSheet, Text, Image, Alert } from 'react-native';
 import LoginForm from '../components/LoginForm';
 import GoogleLoginButton from '../components/GoogleLoginButton';
 import RegistrationForm from '@/components/RegistrationForm';
+import { useRouter } from 'expo-router';
 
 export default function LoginScreen() {
-
+    const router = useRouter();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showRegistration, setShowRegistration] = useState(false);
 
     const handleLogin = () => {
-        Alert.alert(
+        router.push({pathname:"/dashboard"})
+       {/* Alert.alert(
           "Success",
           "Login is successful. Redirecitng to Dashboard!",
           [
-            { text: "OK", onPress: () => console.log("OK Pressed") }
+            { text: "OK", onPress: () => router.push({pathname:"/dashboard"}) }
           ]
-        );
+        ); */}
       };
 
       const handleRegistration = () => {
