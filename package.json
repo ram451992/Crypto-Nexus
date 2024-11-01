@@ -9,7 +9,7 @@
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
     "web": "expo start --web",
-    "buildweb":"npx expo export -p web"
+    "buildweb": "npx expo export -p web"
   },
   "dependencies": {
     "@expo/metro-runtime": "^3.2.3",
@@ -38,6 +38,7 @@
     "expo-system-ui": "~3.0.4",
     "expo-web-browser": "~13.0.3",
     "firebase": "^10.14.1",
+    "openai": "^4.69.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.5",
