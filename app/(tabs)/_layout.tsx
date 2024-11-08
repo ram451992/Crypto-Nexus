@@ -22,7 +22,7 @@ function LogoutButton() {
   };
 
 
-  
+
   return (
     <YStack
       pressStyle={{ opacity: 0.7 }}
@@ -46,12 +46,12 @@ export default function TabLayout() {
           name="index"
           options={{
             title: 'Dashboard',
-            tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} a/>,
-            headerTitle:()=> (<View style={{flexDirection:'row', alignContent:'center',alignItems:'center'}}><Image source={require('@/assets/images/cryptonexus-logo.png')} style={{width:30,height:30}} /><Text style={{fontSize:18, paddingHorizontal:10}}>CryptoNexus</Text></View>),
-            headerTitleAlign:'center',
-            headerShadowVisible:true,
+            tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} a />,
+            headerTitle: () => (<View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center' }}><Image source={require('@/assets/images/cryptonexus-logo.png')} style={{ width: 30, height: 30 }} /><Text style={{ fontSize: 18, paddingHorizontal: 10 }}>CryptoNexus</Text></View>),
+            headerTitleAlign: 'center',
+            headerShadowVisible: true,
             headerTintColor: 'black',
-            headerRight: () => <LogoutButton/>,
+            headerRight: () => <LogoutButton />,
           }}
         />
         <Tabs.Screen
@@ -59,9 +59,9 @@ export default function TabLayout() {
           options={{
             title: 'Market',
             tabBarIcon: ({ color }) => <TabBarIcon name="bar-chart-o" color={color} />,
-            headerTitle:()=> (<View style={{flexDirection:'row', alignContent:'center',alignItems:'center'}}><Image source={require('@/assets/images/cryptonexus-logo.png')} style={{width:30,height:30}} /><Text style={{fontSize:18, paddingHorizontal:10}}>CryptoNexus</Text></View>),
-            headerTitleAlign:'center',
-            headerShadowVisible:true,
+            headerTitle: () => (<View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center' }}><Image source={require('@/assets/images/cryptonexus-logo.png')} style={{ width: 30, height: 30 }} /><Text style={{ fontSize: 18, paddingHorizontal: 10 }}>CryptoNexus</Text></View>),
+            headerTitleAlign: 'center',
+            headerShadowVisible: true,
             headerTintColor: 'black',
           }}
         />
@@ -70,14 +70,31 @@ export default function TabLayout() {
           options={{
             title: 'Portfolio',
             tabBarIcon: ({ color }) => <TabBarIcon name="money" color={color} />,
-            headerTitle:()=> (<View style={{flexDirection:'row', alignContent:'center',alignItems:'center'}}><Image source={require('@/assets/images/cryptonexus-logo.png')} style={{width:30,height:30}} /><Text style={{fontSize:18, paddingHorizontal:10}}>CryptoNexus</Text></View>),
+            headerTitle: () => (<View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center' }}><Image source={require('@/assets/images/cryptonexus-logo.png')} style={{ width: 30, height: 30 }} /><Text style={{ fontSize: 18, paddingHorizontal: 10 }}>CryptoNexus</Text></View>),
             headerRight: () => (
               <Link href="/modal" asChild>
                 <HeaderButton />
               </Link>
             ),
-            headerTitleAlign:'center',
-            headerShadowVisible:true,
+            headerTitleAlign: 'center',
+            headerShadowVisible: true,
+            headerTintColor: 'black',
+
+          }}
+        />
+        <Tabs.Screen
+          name="gpt_chat"
+          options={{
+            title: 'Consultation',
+            tabBarIcon: ({ color }) => <TabBarIcon name="medkit" color={color} />,
+            headerTitle: () => (<View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center' }}><Image source={require('@/assets/images/cryptonexus-logo.png')} style={{ width: 30, height: 30 }} /><Text style={{ fontSize: 18, paddingHorizontal: 10 }}>CryptoNexus</Text></View>),
+            headerRight: () => (
+              <Link href="/modal" asChild>
+                <HeaderButton />
+              </Link>
+            ),
+            headerTitleAlign: 'center',
+            headerShadowVisible: true,
             headerTintColor: 'black',
 
           }}

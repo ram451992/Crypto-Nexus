@@ -15,7 +15,8 @@ expo-env.d.ts
 .tamagui/
 # firebase/supabase/vexo
 .env
-
+.env.js
+bep20.txt
 ios
 android
 
