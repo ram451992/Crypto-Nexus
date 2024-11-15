@@ -1,0 +1,76 @@
+{
+    "status": "success",
+    "count": 5,
+    "articles": [
+        {
+            "id": "cn12345",
+            "title": "Bitcoin Surges Past $70,000 as Institutional Adoption Accelerates",
+            "summary": "Bitcoin has reached a new all-time high, breaking the $70,000 mark amid increased institutional investment and growing mainstream acceptance.",
+            "url": "https://www.cryptonewsfeed.com/articles/bitcoin-surges-past-70000",
+            "source": "CryptoNewsDaily",
+            "published_at": "2024-10-24T09:15:32Z",
+            "categories": [
+                "Bitcoin",
+                "Markets",
+                "Institutional"
+            ],
+            "img": "https://ambblog.b-cdn.net/blog/wp-content/uploads/2023/08/btc-look-like.png.webp"
+        },
+        {
+            "id": "cn12346",
+            "title": "Ethereum 2.0 Upgrade Completes Final Testnet, Mainnet Launch Imminent",
+            "summary": "The long-awaited Ethereum 2.0 upgrade has successfully completed its final testnet phase, with the mainnet launch expected within weeks.",
+            "url": "https://www.cryptonewsfeed.com/articles/ethereum-2-upgrade-completes-final-testnet",
+            "source": "BlockchainInsider",
+            "published_at": "2024-10-24T08:45:17Z",
+            "categories": [
+                "Ethereum",
+                "Technology",
+                "Upgrades"
+            ],
+            "img": "https://cryptotvplus.com/wp-content/uploads/2024/10/IMAGE-2024-10-10-175146.jpg"
+        },
+        {
+            "id": "cn12347",
+            "title": "SEC Approves First Spot Cryptocurrency ETF in Landmark Decision",
+            "summary": "In a historic move, the U.S. Securities and Exchange Commission has approved the first spot cryptocurrency ETF, opening doors for broader market participation.",
+            "url": "https://www.cryptonewsfeed.com/articles/sec-approves-first-spot-crypto-etf",
+            "source": "CryptoRegulationWatch",
+            "published_at": "2024-10-24T07:30:45Z",
+            "categories": [
+                "Regulation",
+                "ETF",
+                "SEC"
+            ],
+            "img": "https://media.licdn.com/dms/image/D4D12AQE93hrgWq8WiQ/article-cover_image-shrink_600_2000/0/1705212805706?e=2147483647&v=beta&t=keacxknIiPwy3NNeocpgBTekGvzd7fpe1HBEpXW7bhk"
+        },
+        {
+            "id": "cn12348",
+            "title": "DeFi Protocol Aave Launches V3 with Enhanced Security Features",
+            "summary": "Aave, a leading DeFi lending protocol, has launched its V3 upgrade with improved security measures and new features to attract more users.",
+            "url": "https://www.cryptonewsfeed.com/articles/aave-launches-v3-enhanced-security",
+            "source": "DeFiDaily",
+            "published_at": "2024-10-24T06:20:11Z",
+            "categories": [
+                "DeFi",
+                "Aave",
+                "Security"
+            ],
+            "img": "https://i.ytimg.com/vi/YRr19SAsqBU/maxresdefault.jpg"
+        },
+        {
+            "id": "cn12349",
+            "title": "Central Bank Digital Currencies: China Expands Digital Yuan Trials to 20 Cities",
+            "summary": "China has expanded its digital yuan trials to 20 major cities, signaling a significant step towards the nationwide adoption of its central bank digital currency.",
+            "url": "https://www.cryptonewsfeed.com/articles/china-expands-digital-yuan-trials",
+            "source": "GlobalCryptoNews",
+            "published_at": "2024-10-24T05:55:39Z",
+            "categories": [
+                "CBDC",
+                "China",
+                "Digital Yuan"
+            ],
+            "img": "https://www.pymnts.com/wp-content/uploads/2021/12/china-digital-yuan.jpg"
+        }
+    ]
+}
