@@ -9,7 +9,8 @@
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
     "web": "expo start --web",
-    "buildweb": "npx expo export -p web"
+    "buildweb": "npx expo export -p web",
+    "buildweb_n_deployfirebase": "npx expo export -p web && firebase deploy --only hosting"
   },
   "dependencies": {
     "@expo/metro-runtime": "^3.2.3",
