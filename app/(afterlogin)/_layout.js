@@ -36,7 +36,7 @@ export default function RootLayout() {
         <TamaguiProvider config={config}>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+            <Stack.Screen name="profilepage" options={{title:"Profile/Settings", presentation: 'modal' }} />
           </Stack>
         </TamaguiProvider>
       </PersistGate>

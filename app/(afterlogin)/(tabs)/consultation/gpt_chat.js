@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, ScrollView, Alert } from 'react-native';
 import { Input, Button, Text, YStack, XStack, styled } from 'tamagui';
 import { OpenAI } from 'openai';
-import getEnvVars from '../../env';
+import getEnvVars from '@/env';
 import { Trash2 } from '@tamagui/lucide-icons';
 import systemPrompt from '@/src/config/systemPrompt';
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBalance } from '@/src/features/tokenBalanceSlice';
 
 const { GROQ_API_KEY } = getEnvVars();
 
@@ -25,6 +26,14 @@ const defaultPrompts = [
 ];
 
 const ChatScreen = () => {
+  const dispatch = useDispatch();
+
+  const { tokenBalance, status, error } = useSelector((state) => state.tokenBalance);
+  useEffect(() => {
+    dispatch(fetchBalance());
+  }, [dispatch]);
+
+
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
   const [typingMessage, setTypingMessage] = useState('');
@@ -86,7 +95,7 @@ const ChatScreen = () => {
       {messages.length === 0 && (
         <YStack space alignItems="center" justifyContent="center">
           <Text fontSize="$5" color="$red1" fontWeight="bold" marginBottom="$2">
-            Select a prompt to start:
+            Select a prompt to start
           </Text>
           {defaultPrompts.map((prompt, index) => (
             <Button key={index} style={{ width: '70%' }} onPress={() => sendMessage(prompt)} marginBottom="$2">

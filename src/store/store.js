@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import authReducer from '../features/authSlice';
 import portfolioReducer from '../features/portfolioSlice';
+import tokenBalanceReducer from '@/src/features/tokenBalanceSlice'
 
 const persistConfig = {
   key: 'root',
@@ -14,6 +15,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   auth: authReducer,
   portfolio: portfolioReducer,
+  tokenBalance: tokenBalanceReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

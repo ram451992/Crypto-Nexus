@@ -1,17 +1,20 @@
 import { Link, Tabs } from 'expo-router';
 
-import { HeaderButton } from '../../components/HeaderButton';
-import { TabBarIcon } from '../../components/TabBarIcon';
+import { HeaderButton } from '../../../components/HeaderButton';
+import { TabBarIcon } from '../../../components/TabBarIcon';
 import { CryptoNexusContext, CryptoNexusContextProvider } from '@/context/CryptoNexusContext';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '@/src/features/authSlice';
-import { Button } from 'tamagui';
-import { LogOut } from '@tamagui/lucide-icons';
+import { Avatar, Button } from 'tamagui';
+import { LogOut, User } from '@tamagui/lucide-icons';
 import { router } from 'expo-router';
 import { Image, Text, View } from 'react-native';
 
 import { YStack } from 'tamagui'
+
+import FloatingMenu from '@/components/FloatingMenuProps';
+import { useState } from 'react';
 
 function LogoutButton() {
   const dispatch = useDispatch();
@@ -20,9 +23,6 @@ function LogoutButton() {
     dispatch(logout());
     router.replace('/');  // Redirect to the root route
   };
-
-
-
   return (
     <YStack
       pressStyle={{ opacity: 0.7 }}
@@ -34,7 +34,36 @@ function LogoutButton() {
   )
 }
 
+function ProfileButton({profilePic}) {
+  console.log("profilePic here ")
+  console.log(profilePic)  
+  return (
+    <Avatar ml={20} circular size="$4" onPress={() => router.push({ pathname: "profilepage" })}>
+      {profilePic && <Avatar.Image src={profilePic} /> }
+      {!profilePic && <Avatar.Image src={require("@/assets/images/profilepic.jpg")} />}
+      <Avatar.Fallback bc="$blue10" />
+    </Avatar>
+  )
+}
+
 export default function TabLayout() {
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState('');
+  const menuOptions = ['Option 1', 'Option 2', 'Option 3'];
+  const profilePic = useSelector((state) => state.auth.profilePic)
+  console.log("profilePic")
+  console.log(profilePic)
+  const handleTabPress = (tabName: string) => {
+    setActiveTab(tabName);
+    setIsMenuVisible(true);
+  };
+
+  const handleOptionPress = (option: string) => {
+    console.log(`Selected option: ${option} for tab: ${activeTab}`);
+    setIsMenuVisible(false);
+    // Handle the option selection here
+  };
+
   console.log("here in (tabs) layout")
   return (
     <CryptoNexusContextProvider>
@@ -52,6 +81,7 @@ export default function TabLayout() {
             headerShadowVisible: true,
             headerTintColor: 'black',
             headerRight: () => <LogoutButton />,
+            headerLeft: () => <ProfileButton profilePic={profilePic}/>,
           }}
         />
         <Tabs.Screen
@@ -83,7 +113,7 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name="gpt_chat"
+          name="consultation"
           options={{
             title: 'Consultation',
             tabBarIcon: ({ color }) => <TabBarIcon name="medkit" color={color} />,
@@ -98,8 +128,17 @@ export default function TabLayout() {
             headerTintColor: 'black',
 
           }}
+        /*listeners={{
+          tabPress: () => handleTabPress('tab3'),
+        }}*/
         />
       </Tabs>
+      <FloatingMenu
+        isVisible={isMenuVisible}
+        onClose={() => setIsMenuVisible(false)}
+        options={menuOptions}
+        onOptionPress={handleOptionPress}
+      />
     </CryptoNexusContextProvider>
   );
 }

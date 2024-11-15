@@ -7,5 +7,5 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx","**/*.js", "**/*.jsx", ".expo/types/**/*.ts", "expo-env.d.ts", "components/navigation/TabBarIcon.js", "app/(tabs)/(dashboard)/_layout.js", "app/index.js"]
+  "include": ["**/*.ts", "**/*.tsx","**/*.js", "**/*.jsx", ".expo/types/**/*.ts", "expo-env.d.ts", "components/navigation/TabBarIcon.js", "app/afterlogin/(tabs)/(dashboard)/_layout.js", "app/index.js"]
 }

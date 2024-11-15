@@ -9,7 +9,7 @@ const CryptoNews = () => {
         const fetchNews = async () => {
             try {
                 // Replace this URL with your actual API endpoint
-                const response = await axios.get('https://run.mocky.io/v3/f7ea8dd5-af96-44b5-a0f0-864dd8aafd12');
+                const response = await axios.get('https://run.mocky.io/v3/d7d70245-09bf-4d3a-a79f-3e73e5bd33eb');
                 setArticles(response.data.articles);
                 setIsLoaded(true);
             } catch (error) {

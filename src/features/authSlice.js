@@ -5,6 +5,7 @@ const authSlice = createSlice({
   initialState: {
     user: null,
     isLoggedIn: false,
+    profilePic: "@/assets/images/profilepic.jpg", // Add this line
   },
   reducers: {
     setUser: (state, action) => {
@@ -14,9 +15,13 @@ const authSlice = createSlice({
     logout: (state) => {
       state.user = null;
       state.isLoggedIn = false;
+      state.profilePic = null; // Reset profile pic on logout
+    },
+    setProfilePic: (state, action) => {
+      state.profilePic = action.payload;
     },
   },
 });
 
-export const { setUser, logout } = authSlice.actions;
+export const { setUser, logout, setProfilePic } = authSlice.actions;
 export default authSlice.reducer;
