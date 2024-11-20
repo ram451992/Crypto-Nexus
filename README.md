@@ -1,4 +1,4 @@
-# App Features:
+# App Features
 - Login/Registration: Sign up using email. 
 - Dashboard: View Crypto data and curated news about crypto markets. 
 - Portfolio Management: Add crypto holdings manually for portfolio tracking. 
