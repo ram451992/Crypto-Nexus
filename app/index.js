@@ -77,8 +77,7 @@ export default function LoginScreen() {
             </>}
             {showRegistration && <>
                 <Text style={styles.subtitle}>Welcome! Please fill below details to Register.</Text>
-                <RegistrationForm handleRegistration={handleRegistration} setShowRegistration={setShowRegistration} />
-            </>}
+                <RegistrationForm username={username} setUsername={setUsername}  setPassword={setPassword} handleRegistration={handleRegistration} setShowRegistration={setShowRegistration} />            </>}
             {/*<GoogleLoginButton onPress={handleGoogleLogin} />*/}
         </View>
     );
