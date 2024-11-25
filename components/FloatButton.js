@@ -31,7 +31,7 @@ export default function FloatButton() {
           <Button size="$4" onPress={() => router.push({pathname:"/(tabs)/portfolio/portfolio_add"})}>
             <Text>Add Manual Portfolio</Text>
           </Button>
-          <Button size="$4" onPress={() => alert("Option 2")}>
+          <Button size="$4" onPress={() => alert("Stretch goal feature coming soon!")}>
             <Text>Track any Wallet Address</Text>
           </Button>
         </YStack>

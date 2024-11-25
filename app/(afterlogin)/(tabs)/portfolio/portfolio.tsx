@@ -29,7 +29,7 @@ const CryptoPortfolioScreen = () => {
 
   const  getUsdByName = (name) =>  {
     console.log("data in this "+JSON.stringify(data))
-    const result = data.all.find(item => item.name === name);
+    const result = data.all.find(item => item.name.toLowerCase() === name.toLowerCase());
     return result ? result.usd : null; // Returns `null` if the name is not found
   }
 

@@ -80,7 +80,7 @@ const CryptoPortfolioScreen = () => {
             <XStack>
               <Input
                 flex={1}
-                placeholder="Coin (e.g., BTC)"
+                placeholder="Coin (e.g., Bitcoin, Ethereum)"
                 value={coin}
                 onChangeText={setCoin}
                 marginRight="$2"
